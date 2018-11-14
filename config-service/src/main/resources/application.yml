@@ -9,7 +9,7 @@ spring:
         git:
           uri: https://github.com/lihui121/myconfig.git
           search-paths: myconfig
-          username: 222222
+          username: 222222345
           password: xxxxxx
     bus:
       enabled: true
