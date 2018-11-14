@@ -12,38 +12,45 @@
     <groupId>com.jxlx.commen</groupId>
     <artifactId>admin-service</artifactId>
 <dependencies>
+    <!--引入注册中心 注册-->
     <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
     </dependency>
+    <!--引入 springbootamdin 监控 -->
     <dependency>
         <groupId>de.codecentric</groupId>
         <artifactId>spring-boot-admin-starter-server</artifactId>
         <version>2.0.1</version>
     </dependency>
-    <dependency>
+
+   <!--<dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-test</artifactId>
         <scope>test</scope>
-    </dependency>
+    </dependency>-->
     <!--<dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-config</artifactId>
     </dependency>-->
+    <!--引入admin 监控页面-->
     <dependency>
         <groupId>de.codecentric</groupId>
         <artifactId>spring-boot-admin-server-ui</artifactId>
         <version>2.0.1</version>
     </dependency>
+    <!-- 引入jmx 动态修改日志级别-->
     <dependency>
         <groupId>org.jolokia</groupId>
         <artifactId>jolokia-core</artifactId>
     </dependency>
+    <!--引入 admin客户端-->
     <dependency>
         <groupId>de.codecentric</groupId>
         <artifactId>spring-boot-admin-starter-client</artifactId>
         <version>2.0.1</version>
     </dependency>
+    <!--引入 springsecurity 安全框架 为amdin 监控页面提供登录-->
     <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-security</artifactId>
@@ -52,16 +59,18 @@
         <groupId>javax.servlet</groupId>
         <artifactId>javax.servlet-api</artifactId>
         <version>3.1.0</version>
-
     </dependency>
+    <!--引入 sctuator 暴露监控接口-->
     <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
+    <!--引入信息总线 实现config 动态刷新-->
     <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-bus-amqp</artifactId>
     </dependency>
+    <!--引入springweb 依赖 log 日志 方便打印日志-->
     <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-web</artifactId>

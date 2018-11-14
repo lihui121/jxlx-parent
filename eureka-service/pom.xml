@@ -13,10 +13,10 @@
     <artifactId>eureka-service</artifactId>
 
 <dependencies>
+    <!--引入注册中心服务-->
     <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-
     </dependency>
 
 </dependencies>

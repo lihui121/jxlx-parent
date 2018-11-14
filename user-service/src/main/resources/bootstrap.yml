@@ -1,4 +1,8 @@
-
+spring:
+  application:
+    name: user-service
+server:
+  port: 8689
 eureka:
   client:
     service-url:
@@ -11,24 +15,19 @@ eureka:
     ip-address: 127.0.0.1
     instance-id: ${spring.application.name}:${server.port} #在eureka中的实例id
 
+# SpringBootActuator监控暴露所有接口
 management:
   endpoints:
     web:
       exposure:
         include: "*"
-# SpringBootActuator监控暴露所有接口
   endpoint:
     health:
       show-details: always
     hystrix:
       stream:
         enabled: true
-spring:
-  application:
-    name: user-service
-server:
-  port: 8689
-
+# 开启feign 中的熔断  // 使用feign 时也可以进行熔断监控
 feign:
   hystrix:
     enabled: true
