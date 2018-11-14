@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: zuul-service
+#  cloud:
+#    config:
+#      name: user-server
+#      profile: pev
+#      label: master
+#      discovery:
+#        service-id: config-service
+#        enabled: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10066/eureka
+    registry-fetch-interval-seconds: 10
+  instance:
+    lease-renewal-interval-in-seconds: 5 # 每隔5秒发送一次心跳
+    lease-expiration-duration-in-seconds: 10 # 10秒不发送就过期
+    prefer-ip-address: true #ip优先，获取host时会获取到ip地址
+    ip-address: 127.0.0.1
+    instance-id: ${spring.application.name}:${server.port} #在eureka中的实例id
+ly:
+  jwt:
+    pubKeyPath: E:/rsa/rsa.pub # 公钥地址
+    cookieName: LY_TOKEN # cookie的名称
+  filter:
+    allowPaths:
+      - /api/auth
+      - /api/search
+      - /api/user/register
+      - /api/user/check
+      - /api/user/send
+      - /api/item
+

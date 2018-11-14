@@ -1,0 +1,15 @@
+server:
+  port: 8087
+  filter:
+    allowPaths:
+      - /api/auth
+      - /api/search
+      - /api/user/register
+      - /api/user/check
+      - /api/user/send
+      - /api/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

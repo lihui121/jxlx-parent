@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="admin-service" />
+        <module name="auth-api-service" />
+        <module name="auth-service" />
+        <module name="commen-service" />
+        <module name="config-service" />
+        <module name="eureka-service" />
+        <module name="office-api-service" />
+        <module name="office-service" />
+        <module name="turbine-service" />
+        <module name="user-api-service" />
+        <module name="user-service" />
+        <module name="zuul-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="admin-service" target="1.8" />
+      <module name="api-service" target="1.8" />
+      <module name="auth-api-service" target="1.8" />
+      <module name="auth-service" target="1.8" />
+      <module name="commen-service" target="1.8" />
+      <module name="config-service" target="1.8" />
+      <module name="eureka-service" target="1.8" />
+      <module name="jxlx-parent" target="1.8" />
+      <module name="office-api-service" target="1.8" />
+      <module name="office-service" target="1.8" />
+      <module name="turbine-service" target="1.8" />
+      <module name="user-api-service" target="1.8" />
+      <module name="user-service" target="1.8" />
+      <module name="zuul-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

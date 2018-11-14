@@ -1,0 +1,33 @@
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10066/eureka
+    registry-fetch-interval-seconds: 10
+  instance:
+    lease-renewal-interval-in-seconds: 5 # 每隔5秒发送一次心跳
+    lease-expiration-duration-in-seconds: 10 # 10秒不发送就过期
+    prefer-ip-address: true #ip优先，获取host时会获取到ip地址
+    ip-address: 127.0.0.1
+    instance-id: ${spring.application.name}:${server.port} #在eureka中的实例id
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+# SpringBootActuator监控暴露所有接口
+  endpoint:
+    health:
+      show-details: always
+    hystrix:
+      stream:
+        enabled: true
+feign:
+  hystrix:
+    enabled: true
+spring:
+  application:
+    name: office-service
+server:
+  port: 8690

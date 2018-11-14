@@ -1,0 +1,32 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10066/eureka
+    registry-fetch-interval-seconds: 10
+  instance:
+    lease-renewal-interval-in-seconds: 5 # 每隔5秒发送一次心跳
+    lease-expiration-duration-in-seconds: 10 # 10秒不发送就过期
+    prefer-ip-address: true #ip优先，获取host时会获取到ip地址
+    ip-address: 127.0.0.1
+    instance-id: ${spring.application.name}:${server.port} #在eureka中的实例id
+
+server:
+  port: 8688
+spring:
+  application:
+    name: turbine-service
+turbine:
+  app-config: user-service,office-service
+  aggregator:
+    cluster-config: default
+  cluster-name-expression: new String("default")
+  instanceUrlSuffix: /hystrix.stream
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

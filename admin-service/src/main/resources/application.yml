@@ -1,0 +1,22 @@
+server:
+  port: 8089
+spring:
+  application:
+    name: admin-service
+  security:
+    user:
+      name: admin
+      password: admin
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+# SpringBootActuator监控暴露所有接口
+  endpoint:
+    health:
+      show-details: always
+    hystrix:
+      stream:
+        enabled: true
+logg

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/api-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/api-service/auth-api-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/api-service/office-api-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/api-service/user-api-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/commen-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/office-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/turbine-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/user-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zuul-service" charset="UTF-8" />
+  </component>
+</project>
