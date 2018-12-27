@@ -11,24 +11,57 @@ eureka:
     ip-address: 127.0.0.1
     instance-id: ${spring.application.name}:${server.port} #在eureka中的实例id
 
+
+
 management:
   endpoints:
     web:
       exposure:
         include: "*"
 # SpringBootActuator监控暴露所有接口
-  endpoint:
-    health:
-      show-details: always
-    hystrix:
-      stream:
-        enabled: true
+#  endpoint:
+#    health:
+#      show-details: always
+#    hystrix:
+#      stream:
+#        enabled: true
 spring:
   application:
     name: user-service
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat,wall,log4j
+
+  #redis配置
+#  redis:
+#    jedis:
+#      pool:
+#        max-active: 3
+#    host: localhost
+#    port: 6379
+
+
+
 server:
   port: 8689
 
 feign:
   hystrix:
     enabled: true
+
+
+mybatis:
+  config-location: classpath:/mybatis/mybatis-config.xml
+
