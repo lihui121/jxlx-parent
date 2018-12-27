@@ -7,7 +7,6 @@ import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
-import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
@@ -31,13 +30,13 @@ public class OfficeApplication {
            return new RestTemplate();
    }
    //用于hystrix dashboard 的类
-    @Bean
-    public ServletRegistrationBean getServlet(){
-        HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
-        ServletRegistrationBean<HystrixMetricsStreamServlet> registrationBean = new ServletRegistrationBean<>(streamServlet);
-        registrationBean.setLoadOnStartup(1);
-        registrationBean.addUrlMappings("/hystrix.stream");
-        registrationBean.setName("HystrixMetricsStreamServlet");
-        return registrationBean;
-    }
+//    @Bean
+//    public ServletRegistrationBean getServlet(){
+//        HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
+//        ServletRegistrationBean<HystrixMetricsStreamServlet> registrationBean = new ServletRegistrationBean<>(streamServlet);
+//        registrationBean.setLoadOnStartup(1);
+//        registrationBean.addUrlMappings("/hystrix.stream");
+//        registrationBean.setName("HystrixMetricsStreamServlet");
+//        return registrationBean;
+//    }
 }

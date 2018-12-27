@@ -19,4 +19,3 @@ management:
     hystrix:
       stream:
         enabled: true
-logg
