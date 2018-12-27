@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
-
+//这是一个测试
 @RestController
 @RequestMapping("user")
 public class UserController {
