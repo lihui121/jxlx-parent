@@ -25,7 +25,7 @@ public class LogAspectServiceApi {
 	private JSONObject jsonObject = new JSONObject();
 
 	// 申明一个切点 里面是 execution表达式
-	@Pointcut("execution(public * com.jxlx.api.service.*.*(..))")
+	@Pointcut("execution(public * com.jxlx.service.*.*(..))")
 	private void controllerAspect() {
 	}
 

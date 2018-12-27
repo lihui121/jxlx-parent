@@ -3,13 +3,16 @@ package com.jxlx.controller;
 
 import com.jxlx.Feign.UserFeign;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
+@RequestMapping("user")
 public class UserController {
     /*@Value("${pool}")
     private String ho;
@@ -17,6 +20,7 @@ public class UserController {
     private String port;*/
     @Autowired
     private UserFeign userFeign;
+    @ApiOperation(value = "这是一个测试接口",notes="根据输入值来获取")
     @GetMapping("/{id}")
    // @HystrixCommand(fallbackMethod = "fallback")
     public String hello(@PathVariable("id") String id){
